@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"> -->
+    <title>LOGIN</title>
+</head>
+
+<style>
+    body{
+        
+        background-image: url(./Images/Background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 840px;
+        height: 767px;
+        margin: auto;
+    }
+    .white{
+        background-color: white;
+        width: 50%;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        height: 767px;
+    }
+
+    .pic{
+        background-image: url(./Images/Rectangle\ 104.png);
+        width: 50%;
+        height: 767px;
+ 
+    }
+
+
+button{
+    width: 50%;
+    border-radius: 40px;
+    background-color: black;
+    border: none;
+}
+
+h4{
+    color: white;
+}
+
+.Or{
+    text-align: center;
+}
+
+ 
+
+a{
+   color: black;
+}
+
+.all{
+    border: none;
+    border-bottom: 2px solid #000; /* Line style */
+    outline: none; /* Remove outline on focus */
+    padding: 5px 0; /* Space around text */
+}
+.all::placeholder {
+    color: black; /* Placeholder color */
+}
+.error{
+        color: red;
+        font-size: 12px;
+    }
+
+    .logo{
+    margin-top: 200px;
+}   
+.form-container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="pic">
+            <div class="logo">
+                <img src="./Images/logo.png" alt="">
+            </div>
+        </div>
+        <div class="white">
+            <div class="form-container-login">
+                <form id="LoginForm">
+                    <h1>Login Now</h1>
+                    <div class="form-group">
+                        <input type="text" class="all" id="username" placeholder="Username:" required />  <br>
+                        <span class="error" id="userError"></span>  
+
+                    </div> <br> <br>
+
+                    <div class="form-group">
+                        <input type="password" class="all" id="password" placeholder="Password" required />  <br>
+                        <span class="error" id="passwordError"></span>
+                    </div> <br><br>
+                     
+                     
+                    <button >
+                        <h4>Login</h4>
+                    </button><br><br>
+                    <a href="#" id="forgotPassword">Forgot Password?</a>
+                    <div class="Or">
+                        ______________ or ______________  <br> <br> <br> <br>
+                        Continue with <br> <br>
+                        <a href="https://www.google.com/" target="_blank"  >  <img src="./Images/Google.png" alt=""> </a>           
+                    </div>
+
+                    <p>Don't have an account? <a href="Sign_Up.html">Sign Up</a></p>
+
+
+                </form>
+            </div>
+     
+        </div>
+    </div>
+    
+   
+
+    <script>
+        document.getElementById('LoginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('userError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            let valid = true;
+            const userData =JSON.parse( localStorage.getItem(userData));
+
+            if(!userData){
+                document.getElementById('userError').innerText = 'No users found. Please sign up first';
+                valid = false;
+            } else {
+                if(username !== userData.username){
+                document.getElementById('userError').innerText = 'Invalid username';
+                valid = false;
+                }
+                if(password !==userData.password){
+                    document.getElementById('passwordError').innerText = 'Incorrect password';
+                    valid = false;
+
+                }
+            }
+
+            if (valid) {
+                alert('Login Successful');
+            }
+
+
+        });
+    </script>
+
+</body>
+</html>
