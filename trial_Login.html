@@ -139,8 +139,8 @@ a{
             event.preventDefault();
             document.getElementById('userError').innerText = '';
             document.getElementById('passwordError').innerText = '';
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value.trim();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
             let valid = true;
             const userData =JSON.parse( localStorage.getItem(userData));
