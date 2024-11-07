@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+
+<style>
+       body {
+        background-color: white;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        font-family: 'Kaisei Decol',serif;
+    }
+    header {
+        background-color: #212121;
+        width: 100%;
+        height: 92px;
+        
+    }
+    .logo{
+        width: 132px;
+        height: 108px;
+    }
+    .sidebar{
+        width: 350px;
+        height: 588px;
+        background-color: white;
+        position: fixed;
+        top: 25;
+        left: 35;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+
+    }
+    .sidebar ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    .sidebar  li{
+        border-bottom: 1px solid black;
+       margin: 15px 0;
+    }
+    .sidebar li:last-child{
+        border-bottom: none;
+    }
+    .sidebar  li a{
+        display: block;
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        width: 98px;
+    }
+    .sidebar li a:hover{
+        text-decoration: underline;
+        color: aqua;
+    }
+    .sidebar img{
+        width: 22px;
+        height: 22px;
+    }
+    .sidebar li a.active{
+        color: #0066FF;
+        /* background-color: black; */
+    }
+    .content .room{
+        display: grid;
+        grid-template-columns: repeat((3,1fr));
+        grid-gap: 20px;
+    }
+     
+    .content .room img{
+        width: 250px;
+        height: auto;
+    }
+    .content{
+        margin-left: 390px;
+        padding: 20px;
+    }
+            /* Styles for the modal */
+            .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+        }
+    
+    
+</style>
+
+<header>
+    <div class="head">
+        <div class="logo">
+            <img src="./Images/logoSmall.png" alt="">
+        </div>
+
+</header>
+
+<!-- <nav>
+
+</nav> -->
+<body>
+    <!-- <h1 style=" text-align:center; font-size: 24px; font-weight: bold; ">Rooms & Cottages</h1> -->
+    <div class="sidebar">
+        <ul>
+            <li> <a href="#"> <img src="./Images/dashboard 1.png" alt="">Dashboard</a>  </li>
+            <li> <a href="#">Bookings</a>  </li>
+            <li> <a href="#" class="acive">Rooms & Cottages</a>  </li>
+            <li> <a href="#">Room Management</a>  </li>
+            <li> <a href="#">Payment Management</a>  </li>
+            <li> <a href="#">Settings</a>  </li>
+        </ul>
+
+    </div>
+
+    <!-- Image button that triggers the modal -->
+    <button id="imageButton"><img src="./Images/plus.png" style="width: 30px; height: 30px; position: fixed; bottom: 20px; right: 20px;" alt=""></button>
+
+<!-- <button style=" position: fixed; bottom: 20px; right: 20px;" id="imageButton">
+    <img src="./Images/plus.png" alt="Add Room" style="width: 30px; height: 30px;" />
+</button> -->
+    <div class="content">
+        <h1 style="text-align: left; font-size: 24px; font-weight: bold; ">Rooms & Cottages</h1>
+        <!-- Add your content here -->
+       <b style="font-size: 20px; text-decoration: underline; color: #0066FF;">Rooms</b>
+         <div class="room">
+            <img src="./Images/Deluxe Room.jpg" alt="">
+            <img src="./Images/twin room.jpg" alt="">
+         </div>
+    </div>
+
+    <!-- The Modal -->
+<div id="roomModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Add Room Details</h2>
+        <form id="roomForm">
+            <label for="roomName">Room Name:</label>
+            <input type="text" id="roomName" required><br><br>
+
+            <label for="occupancy">Occupancy:</label>
+            <input type="number" id="occupancy" required><br><br>
+
+            <label for="price">Price (per night):</label>
+            <input type="number" id="price" required><br><br>
+
+            <label for="roomDescription">Room Description:</label>
+            <textarea id="roomDescription" required></textarea><br><br>
+
+            <label for="roomImage">Room Image:</label>
+            <input type="file" id="roomImage" accept="image/*" required><br><br>
+
+            <button type="button" onclick="addRoom()">Add Room</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    localStorage.clear();
+     document.getElementById('imageButton').onclick = function() {
+        document.getElementById('roomModal').style.display = 'flex';
+    };
+    function closeModal() {
+        document.getElementById('roomModal').style.display = 'none';
+    }
+
+    // Add room function
+    function addRoom() {
+        const roomName = document.getElementById('roomName').value;
+        const roomDescription = document.getElementById('roomDescription').value;
+        const roomImageInput = document.getElementById('roomImage');
+
+        if (!roomName || !roomDescription || !roomImageInput.files[0]) {
+            alert("Please fill out all fields and select an image.");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const base64Image = event.target.result;
+
+            // Creating the room object
+            const room = {
+                name: roomName,
+                description: roomDescription,
+                image: base64Image
+            };
+
+            // Retrieve existing rooms from local storage or initialize an empty array
+            const rooms = JSON.parse(localStorage.getItem('rooms')) || [];
+            rooms.push(room);
+
+            // Save updated rooms array back to local storage
+            localStorage.setItem('rooms', JSON.stringify(rooms));
+            
+            alert("Room added successfully!");
+            closeModal();
+
+        };
+
+        reader.readAsDataURL(roomImageInput.files[0]);
+    }
+
+    // Close the modal if clicked outside of modal content
+    window.onclick = function(event) {
+        const modal = document.getElementById('roomModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
+
+</script>
+
+
+    
+</body>
+
+
+</html>

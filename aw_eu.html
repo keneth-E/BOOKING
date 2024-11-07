@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Modal Form</title>
+    <style>
+        /* Styles for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #000;
+        }
+        
+        /* Position the image icon on the bottom right */
+        #imageButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        #imageButton img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Room display styling */
+        #roomList .room {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Image button positioned on the bottom right -->
+<button id="imageButton">
+    <img src="https://via.placeholder.com/100" alt="Add Room" />
+</button>
+
+<!-- The Modal -->
+<div id="roomModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Add Room Details</h2>
+        <form id="roomForm">
+            <label for="roomName">Room Name:</label>
+            <input type="text" id="roomName" required><br><br>
+
+            <label for="occupancy">Occupancy:</label>
+            <input type="number" id="occupancy" required><br><br>
+
+            <label for="price">Price (per night):</label>
+            <input type="number" id="price" required><br><br>
+
+            <label for="roomDescription">Room Description:</label>
+            <textarea id="roomDescription" required></textarea><br><br>
+
+            <label for="roomImage">Room Image:</label>
+            <input type="file" id="roomImage" accept="image/*" required><br><br>
+
+            <button type="button" onclick="addRoom()">Add Room</button>
+        </form>
+    </div>
+</div>
+
+<!-- Section to display rooms -->
+<div id="roomList"></div>
+
+<script>
+    // Open the modal when the image button is clicked
+    document.getElementById('imageButton').onclick = function() {
+        document.getElementById('roomModal').style.display = 'flex';
+    };
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('roomModal').style.display = 'none';
+    }
+
+    // Add room function
+    function addRoom() {
+        const roomName = document.getElementById('roomName').value;
+        const occupancy = document.getElementById('occupancy').value;
+        const price = document.getElementById('price').value;
+        const roomDescription = document.getElementById('roomDescription').value;
+        const roomImageInput = document.getElementById('roomImage');
+
+        if (!roomName || !occupancy || !price || !roomDescription || !roomImageInput.files[0]) {
+            alert("Please fill out all fields and select an image.");
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const base64Image = event.target.result;
+
+            // Creating the room object
+            const room = {
+                name: roomName,
+                occupancy: occupancy,
+                price: price,
+                description: roomDescription,
+                image: base64Image
+            };
+
+            // Retrieve existing rooms from local storage or initialize an empty array
+            const rooms = JSON.parse(localStorage.getItem('rooms')) || [];
+            rooms.push(room);
+
+            // Save updated rooms array back to local storage
+            localStorage.setItem('rooms', JSON.stringify(rooms));
+            
+            alert("Room added successfully!");
+            closeModal();
+
+            // Display the newly added room
+            displayRooms();
+        };
+
+        reader.readAsDataURL(roomImageInput.files[0]);
+    }
+
+    // Display all rooms function
+    function displayRooms() {
+        const roomListDiv = document.getElementById('roomList');
+        roomListDiv.innerHTML = ''; // Clear previous content
+
+        // Retrieve rooms from local storage
+        const rooms = JSON.parse(localStorage.getItem('rooms')) || [];
+
+        // Display each room
+        rooms.forEach((room, index) => {
+            const roomDiv = document.createElement('div');
+            roomDiv.classList.add('room');
+
+            // Display room details
+            roomDiv.innerHTML = `
+                <h3>Room ${index + 1}: ${room.name}</h3>
+                <p><strong>Occupancy:</strong> ${room.occupancy}</p>
+                <p><strong>Price per night:</strong> $${room.price}</p>
+                <p><strong>Description:</strong> ${room.description}</p>
+                <img src="${room.image}" alt="Room Image" style="width: 100%; height: auto; max-width: 300px;" />
+            `;
+
+            roomListDiv.appendChild(roomDiv);
+        });
+    }
+
+    // Close the modal if clicked outside of modal content
+    window.onclick = function(event) {
+        const modal = document.getElementById('roomModal');
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
+
+    // Load and display rooms on page load
+    window.onload = displayRooms;
+</script>
+
+</body>
+</html>

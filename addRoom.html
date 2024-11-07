@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="./bootstrap/css/bootstrap.min.css" rel="stylesheet"  >
+    <title>ROOMS</title>
+</head>
+
+
+<style>
+    body {
+        background-color: white;
+        overflow: hidden;
+    }
+
+    header {
+        background-color: #212121;
+        width: 100%;
+        height: 92px;
+        
+    }
+    .log{
+        width: 132px;
+        height: 108px;
+    }
+    /* .row{
+        a{
+        color: black;
+        text-decoration: none;
+    }
+    } */
+    
+    .icon{
+        width: 22px;
+        height: 22px;
+    }
+
+    /* .row{
+        height:75px ;
+    } */
+    /* .first{
+        width: 350px;
+        height: 587px;
+    } */
+     .room{
+        img{
+         width: 200px;
+        height: auto;
+
+        }
+         
+     }
+     .iconic{
+        img{
+            width: 40px;
+            height: 40px;
+        }
+     }
+
+    
+</style>
+
+<body>
+    <header>
+        <div class="hed">
+           <div class="log">
+               <img src="./Images/logoSmall.png" alt="">
+           </div>
+           <!-- <div class="em">EMCO</div>
+        </div> -->
+       </header>
+       <h1 class="text-center">Rooms & Cottages</h1>
+
+       <div class=" first ms-3  container text-start" >
+        <div class="row">
+            <div class="col-4 border border-dark"><a href="#"> 
+                <img class="icon" src="./Images/dashboard 1.png" alt="">
+                Dashboard</a> </div>
+        </div>
+        <div class="row">
+            <div class="col-4 border border-dark"><a href="#">
+                <img class="icon" src="./Images/booked 1.png" alt="">
+                Bookings  </a>  </div>
+        </div>
+        <div class="row">
+            <div class="col-4 text-primary border border-dark">
+                <img class="icon" src="./Images/bed 1.png" alt="">
+                Rooms & Cottages   </div>
+        </div>
+        <div class="row">
+            <div class="col-4 border border-dark"> <a href="#">
+                <img class="icon" src="./Images/bed 2.png" alt="">
+                Room Management  </a> </div>
+        </div>
+        <div class="row">
+            <div class=" col-4 border border-dark"> <a href="#">
+                <img class="icon" src="./Images/Payment method.png" alt="">
+                Payment Management </a> </div>
+        </div>
+        <div class="row">
+            <div class="col-4 border border-dark  "> <a  href="#" >
+                <img class="icon" src="./Images/settings 1.png" alt="">
+                Settings </a>   </div>
+        </div>
+       </div>
+        
+       <div class="row">
+        <div class="text-center text-primary fw-bold fs-3 text-decoration-underline"><a href="#">Rooms</a> </div> 
+
+       </div>
+       
+
+        <div class="row grid gap-0  mx-auto p-5 justify-content-center align-items-center">
+            <div class="col-sm-4 col-lg-2">
+                <div class="room p-3 mb-3"><img src="./Images/Deluxe Room.jpg" alt=""></div>
+                Deluxe Room
+            </div>
+            <div class="col-sm-4 border border-dark col-lg-2">
+                <div class="room p-2 mb-2" ><img src="./Images/deluxe-king-room_wide.jpg" alt=""></div>
+                  <h3 id="RoomName">King Room</h3>
+                  <div class="occupy">
+                   <b class="fs-8">Occupancy:</b>  
+                    2 Adults
+                  </div>
+                <div class="price" id="pricing">
+                    <b class="fs-8">Price:</b> 
+                    Starting from &#8369;1200
+    
+            </div>
+            <div >
+
+            </div>
+
+        </div>    
+
+        <div class="icons">
+            <div class="iconic" onclick="addRoom()" id="Adding">
+                <img src="./Images/plus.png" alt="">
+            </div> 
+            <div class="iconic">
+                <img src="./Images/write.png" alt="">
+            </div>
+            <div class="iconic">
+                <img src="./Images/bin.png" alt="">
+            </div>
+        </div>
+<!-- 
+        <div id="myModal" class="modal bg-white mx-auto">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add Room</h2>
+                <form id="roomForm">
+                    <label for="roomName">Room Name:</label>
+                    <input type="text" id="roomName" required><br><br>
+                    <label for="numGuests">Number of Guests:</label>
+                    <input type="number" id="numGuests" required><br><br>
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" required><br><br>
+                    <label for="roomImage">Room Image:</label>
+                    <input type="file" id="roomImage" accept="image/*" required><br><br>
+                    <button type="submit">Add Room</button>
+                </form>
+            </div>
+        </div> -->
+
+        <div id="" ></div>
+
+
+ 
+        
+        <script>
+            function addRoom(Adding){
+
+            }
+            const roomName = document.getElementById('RoomName');
+            const pricing = document.getElementById('pricing');
+            const Rooms = {
+                roomName : " Deluxe Rooms",
+                pricing : 200
+            };
+            localStorage.setItem('Rooms', JSON.stringify(Rooms));
+            console.log(localStorage.getItem('Rooms'));
+            // let rooms = JSON.parse('rooms')
+        </script>
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+</body>
+</html>

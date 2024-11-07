@@ -67,12 +67,12 @@ a{
 .all{
     width: 300px;
     border: none;
-    border-bottom: 2px solid #000; /* Line style */
-    outline: none; /* Remove outline on focus */
-    padding: 5px 0; /* Space around text */
+    border-bottom: 2px solid #000;
+    outline: none; 
+    padding: 5px 0; 
 }
 .all::placeholder {
-    color: black; /* Placeholder color */
+    color: black;
 }
 
 .container{
@@ -105,11 +105,13 @@ a{
                     </div> <br> <br> 
 
                     <div class="input-group" > 
-                    <input type="password" class="all"  id="password" placeholder="Password:" required  /> <br>
+                    <input type="password" class="all"  id="password" placeholder="Password:" required  />
+                    <span id="shown" onclick="togglePass('password')"><img id="img" src="./Images/showw.png" alt=""></span> <br>
                     <span class="error" id="passwordError"></span>
                 </div> <br><br>
                 <div class="input-group">
-                    <input type="password" class="all"  id="confirm" placeholder="Confirm Password:"  required  /> <br>
+                    <input type="password" class="all"  id="confirm" placeholder="Confirm Password:"  required  /> 
+                    <span id="show" onclick="togglePassword('confirm')"><img id="imahe" src="./Images/showw.png" alt=""></span> <br>
                     <span class="error" id="confirmError"></span>
                     
                 </div> <br><br>
@@ -134,42 +136,23 @@ a{
         
     </div>
 
-    <script>
+    <script> 
+    function togglePass(shown) {
+        const field = document.getElementById('password');
+        const type = field.getAttribute('type') === 'password' ? 'text' :'password';
+        field.setAttribute('type', type);
+        const img = document.getElementById('img');
+        img.src = type === 'password'? './Images/showw.png' : './Images/hidden.png';
 
+    }
+    function togglePassword(show) {
+        const field = document.getElementById('confirm');
+        const type = field.getAttribute('type') === 'password' ? 'text' :'password';
+        field.setAttribute('type', type);
+        const image = document.getElementById('imahe');
+        image.src = type === 'password'? './Images/showw.png' : './Images/hidden.png';
 
-        // document.getElementById('signUpForm').addEventListener('submit', function(e) {
-        //     e.preventDefault(); 
-        //     document.getElementById('usernameError').textContent='';
-        //     document.getElementById('emailError').textContent='';
-        //     document.getElementById('passwordError').textContent='';
-
-        //     const username = document.getElementById('username').value.trim();
-        //     const email = document.getElementById('email').value.trim();
-        //     const password = document.getElementById('password').value.trim();
-
-        //     let valid = true;
-        //     if (username.length <8){
-        //         document.getElementById('usernameError').textContent='Username must be at least 8 characters.';
-        //         valid = false;
-        //     }
-
-        //     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-        //     if (!emailPattern.test(email)) {
-        //         document.getElementById('emailError').textContent=' Please enter a valid email address.';
-        //         valid = false;
-        //     }
-
-        //     if (password.length <6) {
-        //         document.getElementById('passwordError').textContent=' Password must be at least 6 characters.';
-        //         valid = false;
-
-        //     }
-
-        //     if (valid) {
-        //         alert('Sign Up successful!');
-        //     }
-        
-        // });
+    }
         document.getElementById('signUpForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -178,10 +161,10 @@ a{
           document.getElementById('passwordError').textContent='';
           document.getElementById('confirmError').textContent='';
 
-         const username = document.getElementById('username').value.trim();
-         const email = document.getElementById('email').value.trim();
-         const password = document.getElementById('password').value.trim();
-         const confirm = document.getElementById('confirm').value.trim();
+         const username = document.getElementById('username').value;
+         const email = document.getElementById('email').value;
+         const password = document.getElementById('password').value;
+         const confirm = document.getElementById('confirm').value;
 
          let valid = true;
 
@@ -204,17 +187,22 @@ a{
 
          }
          if (valid){
-            const userData = {username,email,password};
-            localStorage.setItem('userData',JSON.stringify(userData));
+            const User = {
+                username: username,
+                email: email,
+                password: password,
+                confirmPassword: confirm
+            };
+            localStorage.setItem('User', JSON.stringify(User));
+            console.log(localStorage.getItem('User'));
+            
+
             alert('Sign Up Successful!');
             document.getElementById('signUpForm').reset();
             
          }
 
         });
-
-
-
 
     </script>
     

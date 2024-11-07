@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"> -->
     <title>LOGIN</title>
 </head>
 
@@ -31,6 +30,10 @@
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         height: 767px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
 
     .pic{
@@ -63,6 +66,7 @@ a{
 }
 
 .all{
+    width: 300px;
     border: none;
     border-bottom: 2px solid #000; /* Line style */
     outline: none; /* Remove outline on focus */
@@ -108,12 +112,13 @@ a{
                     </div> <br> <br>
 
                     <div class="form-group">
-                        <input type="password" class="all" id="password" placeholder="Password" required />  <br>
+                        <input type="password" class="all" id="password" placeholder="Password:" required />
+                        <span id="showing" onclick="toggle('password')"><img id="imaging" src="./Images/showw.png" alt=""></span>  <br>
                         <span class="error" id="passwordError"></span>
                     </div> <br><br>
                      
                      
-                    <button >
+                    <button type="submit">
                         <h4>Login</h4>
                     </button><br><br>
                     <a href="#" id="forgotPassword">Forgot Password?</a>
@@ -135,7 +140,15 @@ a{
    
 
     <script>
-        document.getElementById('LoginForm').addEventListener('submit', function(event) {
+        function toggle(showing) {
+        const field = document.getElementById('password');
+        const type = field.getAttribute('type') === 'password' ? 'text' :'password';
+        field.setAttribute('type', type);
+        const img = document.getElementById('imaging');
+        img.src = type === 'password'? './Images/showw.png' : './Images/hidden.png';
+
+    }
+        document.getElementById('LoginForm').addEventListener('submit',function(event)  {
             event.preventDefault();
             document.getElementById('userError').innerText = '';
             document.getElementById('passwordError').innerText = '';
@@ -143,7 +156,7 @@ a{
             const password = document.getElementById('password').value;
 
             let valid = true;
-            const userData =JSON.parse( localStorage.getItem(userData));
+            const userData =JSON.parse( localStorage.getItem('User'));
 
             if(!userData){
                 document.getElementById('userError').innerText = 'No users found. Please sign up first';
@@ -162,8 +175,8 @@ a{
 
             if (valid) {
                 alert('Login Successful');
+                document.getElementById('LoginForm').reset();
             }
-
 
         });
     </script>

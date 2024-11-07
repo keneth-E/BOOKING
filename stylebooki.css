@@ -1,0 +1,1005 @@
+/* btn */
+
+position: relative;
+width: 1440px;
+height: 799px;
+
+background: rgba(0, 0, 0, 0.95);
+
+
+/* .containerf */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 1282px;
+height: 556px;
+left: 77px;
+top: 139px;
+
+background: rgba(33, 33, 33, 0.95);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .containers */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 432px;
+height: 556px;
+left: 1359px;
+top: 139px;
+
+background: rgba(33, 33, 33, 0.95);
+border: 0.299573px solid #FFFFFF;
+border-radius: 5px 0px 0px 5px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* .datebtn */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 281px;
+height: 39px;
+left: 1010px;
+top: 555px;
+
+background: #0066FF;
+border: 0.3px solid #FFFFFF;
+border-radius: 0px 0px 4px 0px;
+
+
+/* Rectangle 284 */
+
+position: absolute;
+width: 351.5px;
+height: 6.99px;
+left: 954.66px;
+top: 351.65px;
+
+background: #D9D9D9;
+border-radius: 4.99288px;
+
+
+/* Rectangle 285 */
+
+position: absolute;
+width: 323.54px;
+height: 6.99px;
+left: 954.66px;
+top: 351.64px;
+
+background: #0057FF;
+border-radius: 4.99288px;
+
+
+/* Rectangle 289 */
+
+position: absolute;
+width: 351.5px;
+height: 6.99px;
+left: 954.66px;
+top: 311.69px;
+
+background: #D9D9D9;
+border-radius: 4.99288px;
+
+
+/* Rectangle 290 */
+
+position: absolute;
+width: 323.54px;
+height: 6.99px;
+left: 954.66px;
+top: 311.69px;
+
+background: #0057FF;
+border-radius: 4.99288px;
+
+
+/* ENTER DATE’S TO SEE PRICES */
+
+position: absolute;
+width: 204px;
+height: 21px;
+left: 1048px;
+top: 564px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .laundryimg */
+
+position: absolute;
+left: 85.97%;
+right: 12.99%;
+top: 58.7%;
+bottom: 39.42%;
+
+background: #FFFFFF;
+
+
+/* .bathroomimg */
+
+position: absolute;
+left: 75.83%;
+right: 23.12%;
+top: 58.7%;
+bottom: 39.42%;
+
+background: #FFFFFF;
+
+
+/* .cleanimg */
+
+position: absolute;
+left: 66.53%;
+right: 32.43%;
+top: 58.7%;
+bottom: 39.42%;
+
+background: #FFFFFF;
+
+
+/* .bedimg */
+
+position: absolute;
+width: 19px;
+height: 16px;
+left: 1133px;
+top: 444px;
+
+background: url(rectangle-material-property-table-furniture-bed-icon-removebg-preview.png);
+mix-blend-mode: screen;
+
+
+/* .airconditioningimg */
+
+position: absolute;
+left: 66.53%;
+right: 32.43%;
+top: 55.69%;
+bottom: 42.43%;
+
+background: #FFFFFF;
+
+
+/* .wifiimg */
+
+position: absolute;
+left: 85.97%;
+right: 12.99%;
+top: 52.57%;
+bottom: 45.56%;
+
+background: #FFFFFF;
+
+
+/* .sexcimg */
+
+position: absolute;
+left: 80.35%;
+right: 18.61%;
+top: 52.69%;
+bottom: 45.43%;
+
+background: #FFFFFF;
+
+
+/* .tvimg */
+
+position: absolute;
+left: 72.01%;
+right: 26.94%;
+top: 52.69%;
+bottom: 45.43%;
+
+background: #FFFFFF;
+
+
+/* .closetimg */
+
+position: absolute;
+left: 66.53%;
+right: 32.43%;
+top: 52.94%;
+bottom: 45.18%;
+
+background: #FFFFFF;
+
+
+/* .kitchenimg */
+
+position: absolute;
+left: 85.97%;
+right: 12.99%;
+top: 49.94%;
+bottom: 48.19%;
+
+background: #FFFFFF;
+
+
+/* .balconyimg */
+
+position: absolute;
+left: 80.35%;
+right: 18.61%;
+top: 49.81%;
+bottom: 48.31%;
+
+background: #FFFFFF;
+
+
+/* .poolimg */
+
+position: absolute;
+left: 72.01%;
+right: 26.94%;
+top: 49.81%;
+bottom: 48.31%;
+
+background: #FFFFFF;
+
+
+/* .housesizeleft */
+
+position: absolute;
+left: 66.6%;
+right: 32.56%;
+top: 50.3%;
+bottom: 49.45%;
+
+background: #FFFFFF;
+transform: rotate(90deg);
+
+
+/* .housesizetop */
+
+position: absolute;
+left: 66.74%;
+right: 32.5%;
+top: 49.8%;
+bottom: 49.95%;
+
+background: #FFFFFF;
+
+
+/* .houseimg */
+
+position: absolute;
+left: 66.74%;
+right: 32.43%;
+top: 50.18%;
+bottom: 48.44%;
+
+background: #FFFFFF;
+
+
+/* .LRimgholder */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 850px;
+height: 134px;
+left: 77px;
+top: 561px;
+
+background: rgba(33, 33, 33, 0.95);
+border-width: 0.299573px 0px 0.299573px 0.299573px;
+border-style: solid;
+border-color: #FFFFFF;
+border-radius: 0px 0px 0px 5px;
+
+
+/* .LRimgholder */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 850px;
+height: 59px;
+left: 77px;
+top: 139px;
+
+background: rgba(33, 33, 33, 0.95);
+border-width: 0.299573px 0px 0.299573px 0.299573px;
+border-style: solid;
+border-color: #FFFFFF;
+border-radius: 5px 0px 0px 0px;
+
+
+/* .galleryholder */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 138px;
+height: 35px;
+left: 122px;
+top: 155px;
+
+background: rgba(33, 33, 33, 0.95);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .imgs */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 135px;
+height: 90px;
+left: 742px;
+top: 582px;
+
+background: url(peakpx (14).jpg);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .imgf */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 135px;
+height: 90px;
+left: 592px;
+top: 582px;
+
+background: url(peakpx (14).jpg);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .imgt */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 135px;
+height: 90px;
+left: 440px;
+top: 582px;
+
+background: url(peakpx (14).jpg);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .imgs */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 135px;
+height: 90px;
+left: 288px;
+top: 582px;
+
+background: url(peakpx (14).jpg);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .imgf */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 135px;
+height: 90px;
+left: 136px;
+top: 582px;
+
+background: url(pexels-pixabay-258154);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .mainroomimg */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 772px;
+height: 339px;
+left: 122px;
+top: 210px;
+
+background: url(peakpx (14).jpg);
+border: 0.299573px solid #FFFFFF;
+border-radius: 4.99288px;
+
+
+/* .Laundry */
+
+position: absolute;
+width: 54px;
+height: 17px;
+left: 1261px;
+top: 468px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Ensuitebathroom */
+
+position: absolute;
+width: 116.83px;
+height: 17px;
+left: 1115px;
+top: 468px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Cleaningservice */
+
+position: absolute;
+width: 99px;
+height: 17px;
+left: 979px;
+top: 468px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .QueenbedandSinglebed */
+
+position: absolute;
+width: 174px;
+height: 17px;
+left: 1157px;
+top: 443px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Airconditioningheater */
+
+position: absolute;
+width: 149px;
+height: 17px;
+left: 979px;
+top: 443px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .FreeWiFi */
+
+position: absolute;
+width: 60.91px;
+height: 17.97px;
+left: 1261px;
+top: 419px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* .Sexchair */
+
+position: absolute;
+width: 55px;
+height: 17px;
+left: 1177px;
+top: 417px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .FlatscreenTV */
+
+position: absolute;
+width: 91.87px;
+height: 17px;
+left: 1057px;
+top: 417px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Closet */
+
+position: absolute;
+width: 40px;
+height: 17px;
+left: 979px;
+top: 422px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Kitchen */
+
+position: absolute;
+width: 48px;
+height: 17px;
+left: 1261px;
+top: 396px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Balcony */
+
+position: absolute;
+width: 51.93px;
+height: 17px;
+left: 1177px;
+top: 396px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Privatepool */
+
+position: absolute;
+width: 75.89px;
+height: 17px;
+left: 1057px;
+top: 396px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .mtext */
+
+position: absolute;
+width: 40.94px;
+height: 17px;
+left: 978.62px;
+top: 395.59px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+
+color: #FFFFFF;
+
+
+
+/* .Features */
+
+position: absolute;
+width: 55.92px;
+height: 14.98px;
+left: 955.66px;
+top: 369.63px;
+
+font-family: 'IM FELL French Canon SC';
+font-style: normal;
+font-weight: 400;
+font-size: 13.9801px;
+line-height: 16px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .ratingclean */
+
+position: absolute;
+width: 24.96px;
+height: 11.98px;
+left: 1281.19px;
+top: 329.68px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 16px;
+text-align: center;
+
+color: #FFFFFF;
+
+text-shadow: 0px 3.99431px 3.99431px rgba(0, 0, 0, 0.25);
+
+
+/* .Cleanliness */
+
+position: absolute;
+width: 69.9px;
+height: 14.98px;
+left: 951.66px;
+top: 328.68px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 16px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .ratingscroom */
+
+position: absolute;
+width: 24.96px;
+height: 11.98px;
+left: 1281.19px;
+top: 290.72px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 16px;
+text-align: center;
+
+color: #FFFFFF;
+
+text-shadow: 0px 3.99431px 3.99431px rgba(0, 0, 0, 0.25);
+
+
+/* .Roomcomfortandquality */
+
+position: absolute;
+width: 141.8px;
+height: 14.98px;
+left: 955.66px;
+top: 289.72px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 16px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .REVIEWS */
+
+position: absolute;
+width: 54.32px;
+height: 7.9px;
+left: 957.2px;
+top: 257.31px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 6.91358px;
+line-height: 9px;
+text-align: center;
+
+color: rgba(255, 255, 255, 0.55);
+
+text-shadow: 0px 3.99431px 3.99431px rgba(0, 0, 0, 0.25);
+
+
+/* .Guestratings */
+
+position: absolute;
+width: 90.87px;
+height: 14.98px;
+left: 954px;
+top: 240px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 13.9801px;
+line-height: 18px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .EUROSUITE2 */
+
+position: absolute;
+width: 229px;
+height: 31px;
+left: 956px;
+top: 194px;
+
+font-family: 'Poltawski Nowy';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 31px;
+
+color: #FFFFFF;
+
+
+
+/* .All */
+
+position: absolute;
+width: 42.94px;
+height: 20.97px;
+left: 280.61px;
+top: 161.85px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .roomLine */
+
+position: absolute;
+width: 63px;
+height: 0px;
+left: 365px;
+top: 181px;
+
+border: 1px solid #FFFFFF;
+
+
+/* .Rooms */
+
+position: absolute;
+width: 64.91px;
+height: 20.97px;
+left: 364.51px;
+top: 161.85px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .Propertyviews */
+
+position: absolute;
+width: 105.85px;
+height: 20.97px;
+left: 470.37px;
+top: 161.85px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .Facilities */
+
+position: absolute;
+width: 71.9px;
+height: 20.97px;
+left: 617.18px;
+top: 161.85px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .Dinning */
+
+position: absolute;
+width: 71.9px;
+height: 20.97px;
+left: 720.03px;
+top: 161.85px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* .Others */
+
+position: absolute;
+width: 52.92px;
+height: 20.97px;
+left: 821.88px;
+top: 161.85px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Gallery */
+
+position: absolute;
+width: 54.92px;
+height: 20.97px;
+left: 184.74px;
+top: 161.85px;
+
+font-family: 'Kaisei Decol';
+font-style: normal;
+font-weight: 400;
+font-size: 11.9829px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+
+opacity: 0.88;
+
+
+/* .gallaryimg */
+
+position: absolute;
+left: 9.72%;
+right: 87.92%;
+top: 20.32%;
+bottom: 77.15%;
+
+background: #FFFFFF;
+
+
+/* .backbtn */
+
+position: absolute;
+left: 90.69%;
+right: 6.94%;
+top: 19.65%;
+bottom: 76.56%;
+
+background: #FFFFFF;
+
+
+/* .nextR */
+
+position: absolute;
+left: 61.94%;
+right: 36.67%;
+top: 77.85%;
+bottom: 19.65%;
+
+background: rgba(255, 255, 255, 0.5);
+
+
+/* .nextL */
+
+position: absolute;
+left: 8.47%;
+right: 90.14%;
+top: 77.85%;
+bottom: 19.65%;
+
+background: rgba(255, 255, 255, 0.5);
+transform: matrix(-1, 0, 0, 1, 0, 0);
